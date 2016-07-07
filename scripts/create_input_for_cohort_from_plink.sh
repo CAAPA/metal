@@ -19,5 +19,6 @@ do
     rm tmp_${cohort}_${chr}.txt
 done
 
+mkdir ../data/
 mkdir  ../data/input/
 mv tmp_${cohort}.txt ../data/input/${cohort}.txt
