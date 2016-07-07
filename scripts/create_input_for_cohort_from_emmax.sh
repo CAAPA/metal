@@ -15,7 +15,7 @@ module load R/3.2.5
 
 
 rm tmp_${cohort}.txt
-for chr in {21..22..1}
+for chr in {1..22..1}
 do
     cat create_input_for_cohort_from_emmax.R | R --vanilla --args $cohort $assoc_prefix $assoc_suffix $chr
     cat tmp_${cohort}_${chr}.txt >> tmp_${cohort}.txt
