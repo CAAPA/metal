@@ -4,7 +4,7 @@ cohort <- args[1]
 assoc.prefix <- args[2]
 assoc.suffix <- args[3]
 chr <- args[4]
-n <- args[5]
+n <- as.numeric(args[5])
 min.maf <- 3/n
 
 assoc.file.name <- paste0(assoc.prefix, chr, assoc.suffix) 

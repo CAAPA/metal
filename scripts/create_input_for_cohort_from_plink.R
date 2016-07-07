@@ -2,7 +2,7 @@ args <- commandArgs(trailingOnly = TRUE)
 
 cohort <- args[1]
 chr <- args[2]
-n <- args[3]
+n <- as.numeric(args[3])
 min.maf <- 3/n
 
 assoc.file.name <- paste0("/gpfs/barnes_share/caapa_plink_assoc_analysis/data/output/", 
