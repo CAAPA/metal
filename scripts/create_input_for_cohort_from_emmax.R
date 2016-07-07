@@ -20,7 +20,7 @@ info <- info[info$MAF >= min.maf,c(1,2,3,5)]
 
 assoc.results <- merge(assoc.results, info)
 write.table(assoc.results[(is.na(assoc.results$P)),], na.file.name, 
-            sep="\t", quote=F, row.names=F, col.names=T)
+            sep="\t", quote=F, row.names=F, col.names=F)
 assoc.results <- assoc.results[!(is.na(assoc.results$P)),]
 assoc.results$EFFECT <- "+"
 assoc.results$EFFECT[assoc.results$BETA < 0] <- "-"
@@ -28,4 +28,4 @@ assoc.results <- assoc.results[,c("SNP", "REF.0.", "ALT.1.", "MAF", "EFFECT", "P
 names(assoc.results) <- c("MARKER", "REF", "ALT", "MAF", "EFFECT", "PVALUE")
 
 write.table(assoc.results, out.file.name,
-            sep="\t", quote=F, row.names=F, col.names=T)
+            sep="\t", quote=F, row.names=F, col.names=F)

@@ -15,7 +15,8 @@ n=$4
 module load R/3.2.5
 
 
-rm tmp_${cohort}.txt
+echo -e "MARKER\tREF\tALT\tMAF\tEFFECT\tPVALUE" > tmp_${cohort}.txt
+echo -e "MARKER\tREF\tALT\tMAF\tEFFECT\tPVALUE" > tmp_na_${cohort}.txt
 for chr in {1..22..1}
 do
     cat create_input_for_cohort_from_emmax.R | R --vanilla --args $cohort $assoc_prefix $assoc_suffix $chr $n
