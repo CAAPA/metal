@@ -11,6 +11,7 @@ fi
 cohort=$1
 assoc_prefix=$2
 assoc_suffix=$3
+module load R/3.2.5
 
 
 rm tmp_${cohort}.txt

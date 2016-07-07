@@ -9,7 +9,7 @@ then
     exit
 fi
 cohort=$1
-
+module load R/3.2.5
 
 rm tmp_${cohort}.txt
 for chr in {21..22..1}
