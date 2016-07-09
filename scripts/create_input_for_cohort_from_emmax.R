@@ -5,7 +5,7 @@ assoc.prefix <- args[2]
 assoc.suffix <- args[3]
 chr <- args[4]
 n <- as.numeric(args[5])
-min.maf <- 3/n
+#min.maf <- 3/n
 
 assoc.file.name <- paste0(assoc.prefix, chr, assoc.suffix) 
 info.file.name <- paste0("/gpfs/barnes_share/caapa_gwas_adpc/preqc_imputed/", 
@@ -16,7 +16,7 @@ out.file.name <- paste0("tmp_", cohort, "_", chr, ".txt")
 assoc.results <- read.table(assoc.file.name, head=T, stringsAsFactors = F)
 names(assoc.results) <- c("SNP", "BETA", "P")
 info <- read.table(gzfile(info.file.name), head=T, stringsAsFactors = F)
-info <- info[info$MAF >= min.maf,c(1,2,3,5)]
+#info <- info[info$MAF >= min.maf,c(1,2,3,5)]
 
 assoc.results <- merge(assoc.results, info)
 write.table(assoc.results[(is.na(assoc.results$P)),], na.file.name, 
