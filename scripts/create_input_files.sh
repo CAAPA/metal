@@ -1,0 +1,16 @@
+#!/bin/bash
+
+sbatch create_input_for_cohort_from_plink.sh jackson_aric 327
+sbatch create_input_for_cohort_from_plink.sh jackson_jhs 632
+sbatch create_input_for_cohort_from_plink.sh jhu_abr 85
+sbatch create_input_for_cohort_from_plink.sh winston_salem 341
+
+sbatch create_input_for_cohort_from_emmax.sh chicago /gpfs/barnes_share/dcl01_data/CAAPA_jhuGRAAD_BDOS_032416/CHICAGO/chr _typed_overlap_allchohort.ps 270
+sbatch create_input_for_cohort_from_emmax.sh jhu_650y /gpfs/barnes_share/dcl01_data/CAAPA_jhuGRAAD_BDOS_032416/JHU_GRAAD/chr _typed_overlap_allchohort.ps 781
+sbatch create_input_for_cohort_from_emmax.sh jhu_bdos /gpfs/barnes_share/dcl01_data_aniket/data/CAAPA_jhuGRAAD_BDOS_032416/JHU_BDOS/chr _typed_overlap_allchohort_rerun.ps 620
+sbatch create_input_for_cohort_from_emmax.sh ucsf_sf /gpfs/barnes_share/dcl01_data/CAAPA_jhuGRAAD_BDOS_032416/UCSF_SF/chr _typed_overlap_allchohort.ps 1692
+sbatch create_input_for_cohort_from_emmax.sh ucsf_pr /gpfs/barnes_share/dcl01_data/CAAPA_jhuGRAAD_BDOS_032416/UCSF_PR/chr _typed_overlap_allchohort.ps 1754
+
+sbatch create_input_for_cohort_from_mqls.sh
+
+sbatch create_input_for_cohort_from_genesis.sh
