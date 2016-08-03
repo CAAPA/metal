@@ -3,7 +3,7 @@
 #assoc.info.file.name <- args[1]
 #out.file.name <- args[2]
 assoc.info.file.name <- "/gpfs/barnes_share/dcl01_data_aniket/data/CAAPA_jhuGRAAD_BDOS_032416/WASHINGTON/GENESIS/NIH_GENESIS_allchr_results_info.txt"
-out.file.name <- "../data/output/washington.txt"
+out.file.name <- "../data/input/washington.txt"
 
 assoc.results <- read.table(assoc.info.file.name, head=T, stringsAsFactors = F)[,c(10,11,12,14,16,6,9)]
 

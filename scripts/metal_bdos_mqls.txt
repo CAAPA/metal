@@ -1,0 +1,9 @@
+MARKER MARKER
+ALLELE REF ALT
+EFFECT EFFECT
+PVALUE PVALUE
+DEFAULTWEIGHT 307
+PROCESS ../data/input/jhu_bdos_mqls.txt
+
+OUTFILE meta_output_aa_bdos_mqls .tbl
+ANALYZE

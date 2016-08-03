@@ -1,0 +1,9 @@
+MARKER MARKER
+ALLELE REF ALT
+EFFECT EFFECT
+PVALUE PVALUE
+DEFAULTWEIGHT 876
+PROCESS ../data/input/ucsf_pr.txt
+
+OUTFILE meta_output_aa_bdos_pr .tbl
+ANALYZE

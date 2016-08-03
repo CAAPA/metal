@@ -12,6 +12,6 @@ sbatch create_input_for_cohort_from_emmax.sh ucsf_sf /gpfs/barnes_share/dcl01_da
 sbatch create_input_for_cohort_from_emmax.sh ucsf_pr /gpfs/barnes_share/dcl01_data/CAAPA_jhuGRAAD_BDOS_032416/UCSF_PR/chr _typed_overlap_allchohort.ps 1754
 
 
-sbatch create_input_for_cohort_from_mqls.sh
+sbatch --mem=16000 create_input_for_cohort_from_mqls.sh
 
-sbatch create_input_for_cohort_from_genesis.sh
+sbatch --mem=64000 create_input_for_cohort_from_genesis.sh
