@@ -23,11 +23,8 @@ write.table(assoc.results[(is.na(assoc.results$P)),], na.file.name,
             sep="\t", quote=F, row.names=F, col.names=F)
 assoc.results <- assoc.results[!(is.na(assoc.results$P)),]
 
-#This logic is flipped, since the direction of effect in the PLINK results is actually
-#that of the REF and not ALT allele, due to a bug in the minimac ouput file to PLINK input file
-#conversion script
-assoc.results$EFFECT <- "-"
-assoc.results$EFFECT[assoc.results$BETA < 0] <- "+"
+assoc.results$EFFECT <- "+"
+assoc.results$EFFECT[assoc.results$BETA < 0] <- "-"
 
 assoc.results <- assoc.results[,c("SNP", "REF.0.", "ALT.1.", "MAF", "EFFECT", "P")]
 names(assoc.results) <- c("MARKER", "REF", "ALT", "MAF", "EFFECT", "PVALUE")
